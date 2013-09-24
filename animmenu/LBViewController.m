@@ -42,14 +42,16 @@
 
 - (void)callMenu
 {
-    UIGraphicsBeginImageContextWithOptions(self.view.frame.size, NO, [UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContext(self.view.bounds.size);
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    NSData *data = UIImagePNGRepresentation(image);
+    UIImage *screenShot = [UIImage imageWithData:data];
 
     self.blurView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     _blurView.alpha = 1;
-    _blurView.image = [image stackBlur:30];
+    _blurView.image = [screenShot stackBlur:30];
     [self.view addSubview:_blurView];
 
     LBMenuView *v = [[LBMenuView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
