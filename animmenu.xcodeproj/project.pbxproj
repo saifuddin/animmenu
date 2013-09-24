@@ -26,6 +26,7 @@
 		7A48DBCE17F17CDF009B0968 /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A48DBCB17F17CDF009B0968 /* DRNRealTimeBlurView.m */; };
 		7A48DBCF17F17CDF009B0968 /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A48DBCD17F17CDF009B0968 /* UIImage+BoxBlur.m */; };
 		7A48DBD217F193A2009B0968 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A48DBD017F193A2009B0968 /* UIImage+StackBlur.m */; };
+		7A48DBD417F1AF5C009B0968 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A48DBD317F1AF5C009B0968 /* test2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		7A48DBCD17F17CDF009B0968 /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 		7A48DBD017F193A2009B0968 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
 		7A48DBD117F193A2009B0968 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
+		7A48DBD317F1AF5C009B0968 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				7A48DBD017F193A2009B0968 /* UIImage+StackBlur.m */,
 				7A48DBD117F193A2009B0968 /* UIImage+StackBlur.h */,
+				7A48DBD317F1AF5C009B0968 /* test2.png */,
 				7A48DBC717F17A82009B0968 /* test.png */,
 				7A48DB9E17F14547009B0968 /* LBAppDelegate.h */,
 				7A48DB9F17F14547009B0968 /* LBAppDelegate.m */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A48DBA817F14547009B0968 /* Images.xcassets in Resources */,
+				7A48DBD417F1AF5C009B0968 /* test2.png in Resources */,
 				7A48DB9A17F14547009B0968 /* InfoPlist.strings in Resources */,
 				7A48DBA317F14547009B0968 /* Main.storyboard in Resources */,
 				7A48DBC817F17A82009B0968 /* test.png in Resources */,
