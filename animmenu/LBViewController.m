@@ -19,24 +19,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"test.png"]];
 
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     btn.frame = CGRectMake(100, 100, 100, 100);
+    btn.backgroundColor = [UIColor whiteColor];
+
     [btn addTarget:self action:@selector(callMenu) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 }
 
 - (void)callMenu
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    
     UIGraphicsBeginImageContextWithOptions(self.view.window.bounds.size, NO, [UIScreen mainScreen].scale);
     [self.view.window.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    self.blurView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -20, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    self.blurView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     _blurView.alpha = 0;
     _blurView.image = [image stackBlur:30];
     [self.view addSubview:_blurView];
