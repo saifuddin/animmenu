@@ -123,7 +123,7 @@
         [_btnTerkini addTarget:self action:@selector(didTappedAtButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_btnTerkini];
 
-        [UIView animateWithDuration:0.2
+        [UIView animateWithDuration:0.1
                               delay:0
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
