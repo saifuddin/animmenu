@@ -31,9 +31,14 @@
 {
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
+    UIGraphicsBeginImageContextWithOptions(self.view.window.bounds.size, NO, [UIScreen mainScreen].scale);
+    [self.view.window.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
     self.blurView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -20, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     _blurView.alpha = 0;
-    _blurView.image = [[UIImage imageNamed:@"test.png"] stackBlur:30];
+    _blurView.image = [image stackBlur:30];
     [self.view addSubview:_blurView];
 
     LBMenuView *v = [[LBMenuView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height + 20)];
